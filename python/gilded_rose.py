@@ -37,7 +37,10 @@ class GildedRose(object):
                 if item.quality < 0:
                     item.quality = 0
 
-
+    def conjured(self):
+        for item in self.items:
+            item.sell_in -= 1
+            item.quality -= 2
 
              
     # def update_quality(self):
